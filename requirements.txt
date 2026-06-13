@@ -1,0 +1,39 @@
+# ----- Web / API -----
+fastapi>=0.115,<1.0
+uvicorn[standard]>=0.30,<1.0
+python-multipart>=0.0.9        # multipart file uploads for /ingest
+pydantic>=2.7,<3.0
+pydantic-settings>=2.3,<3.0
+httpx>=0.27
+
+# ----- LangGraph / LangChain -----
+langgraph>=0.2.50,<0.4
+langgraph-checkpoint>=2.0
+langchain>=0.3.7,<0.4
+langchain-core>=0.3.15,<0.4
+langchain-community>=0.3.5,<0.4   # BM25Retriever
+langchain-text-splitters>=0.3,<0.4
+langchain-chroma>=0.1.4
+langchain-huggingface>=0.1.2
+langchain-openai>=0.2.5           # optional provider/embeddings
+# langchain-anthropic>=0.2.4      # uncomment to use Anthropic
+langchain-groq>=0.2.1             # Groq provider (enabled)
+# langchain-google-genai>=2.0     # uncomment to use Google Gemini
+langchain-tavily>=0.1             # web-search fallback (bonus, enabled)
+
+# ----- Vector store / embeddings / retrieval -----
+chromadb>=0.5.5
+sentence-transformers>=3.0        # local embeddings (default, no API key)
+rank-bm25>=0.2.2                  # sparse lexical retriever
+flashrank>=0.2.9                  # cross-encoder reranker (optional, local ONNX)
+tiktoken>=0.7                     # token-aware chunk sizing
+
+# ----- Resilience / utils -----
+tenacity>=8.3
+
+# ----- UI (bonus) -----
+streamlit>=1.36
+
+# ----- Tests / dev -----
+pytest>=8.2
+pytest-asyncio>=0.23
