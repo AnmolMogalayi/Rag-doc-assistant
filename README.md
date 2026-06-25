@@ -262,13 +262,11 @@ LLM_MODEL=llama3.1
 uvicorn app.main:app --reload
 ```
 
-On first start the app **auto-ingests the bundled corpus** in `data/corpus/`.
-Open the interactive docs at **http://localhost:8000/docs** 🎉
 
 ### 4️⃣ (Optional) Streamlit UI
 
 ```bash
-streamlit run app/ui/streamlit_app.py     # talks to the API at http://localhost:8000
+streamlit run app/ui/streamlit_app.py    
 ```
 
 ### 🐳 Docker
